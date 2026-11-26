@@ -1,0 +1,116 @@
+.assistant-dialog {
+  position: fixed;
+  box-sizing: border-box;
+  inset: 0;
+  width: min(720px, calc(100vw - 48px));
+  height: 70vh;
+  height: 70dvh;
+  max-height: none;
+  max-width: none;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #dce3ec;
+  border-radius: 18px;
+  background: #fff;
+  color: #15253b;
+  box-shadow: 0 28px 80px #0d1d3480;
+}
+
+.assistant-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.assistant-dialog::backdrop { background: #12243c9c; }
+
+.assistant-dialog__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 24px;
+  border-bottom: 1px solid #e5eaf1;
+}
+
+.assistant-dialog__header h2 { margin: 0; font-size: 20px; }
+
+.assistant-close-glyph { display: inline-block; position: relative; width: 14px; height: 14px; }
+
+.assistant-close-glyph::before, .assistant-close-glyph::after {
+  position: absolute;
+  inset: 6px 0 auto;
+  height: 1.5px;
+  border-radius: 2px;
+  background: currentColor;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.assistant-close-glyph::after { transform: rotate(-45deg); }
+
+.assistant-dialog__context {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin: 14px 24px 0;
+  padding: 2px 3px 2px 1px;
+  border-radius: 6px;
+  background: #eef5ff;
+}
+
+.assistant-dialog__body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 16px 24px 24px;
+}
+
+.assistant-dialog :focus-visible,
+.assistant-hint :focus-visible {
+  outline: 2px solid #0052d9;
+  outline-offset: 2px;
+}
+
+.assistant-hint {
+  position: fixed;
+  z-index: 10;
+  inset: auto 24px 24px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: calc(100% - 48px);
+  color: #17283f;
+  pointer-events: none;
+}
+
+.assistant-hint[data-visible='true'] {
+  padding: 8px 10px 8px 14px;
+  border: 1px solid #cad6e6;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 28px #15253b22;
+  pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+  .assistant-dialog {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .assistant-dialog__header {
+    padding: calc(12px + env(safe-area-inset-top)) 16px 12px;
+  }
+
+  .assistant-dialog__context { margin-inline: 16px; }
+
+  .assistant-dialog__body {
+    padding-inline: 16px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+}

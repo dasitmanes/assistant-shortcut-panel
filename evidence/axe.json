@@ -1,0 +1,76 @@
+{
+  "axe-desktop": {
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.1"
+    },
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-allowed-role",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "button-name",
+      "color-contrast",
+      "duplicate-id-aria",
+      "empty-heading",
+      "form-field-multiple-labels",
+      "heading-order",
+      "label-title-only",
+      "label",
+      "landmark-banner-is-top-level",
+      "landmark-no-duplicate-banner",
+      "landmark-unique",
+      "nested-interactive",
+      "tabindex"
+    ],
+    "incomplete": [],
+    "violations": []
+  },
+  "axe-mobile": {
+    "engine": {
+      "name": "axe-core",
+      "version": "4.14.1"
+    },
+    "viewport": {
+      "width": 390,
+      "height": 664
+    },
+    "passedRules": [
+      "aria-allowed-attr",
+      "aria-allowed-role",
+      "aria-conditional-attr",
+      "aria-deprecated-role",
+      "aria-hidden-focus",
+      "aria-prohibited-attr",
+      "aria-required-attr",
+      "aria-roles",
+      "aria-valid-attr-value",
+      "aria-valid-attr",
+      "button-name",
+      "color-contrast",
+      "duplicate-id-aria",
+      "empty-heading",
+      "form-field-multiple-labels",
+      "heading-order",
+      "label-title-only",
+      "label",
+      "landmark-banner-is-top-level",
+      "landmark-no-duplicate-banner",
+      "landmark-unique",
+      "nested-interactive",
+      "tabindex"
+    ],
+    "incomplete": [],
+    "violations": []
+  }
+}
